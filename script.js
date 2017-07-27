@@ -25,6 +25,9 @@ $(document).ready(function() {
 			player1 = !player1;
 			const winner = ifWon();
 			if (winner) {
+				// enable restart game
+				$("#reset").prop('disabled', false);
+
 				// wait repaint element
 				setTimeout(function(){
 					alert(winner + ' won the game')
@@ -51,5 +54,11 @@ $(document).ready(function() {
 			return node1[0].classList[2]
 		}
 	}
+
+	$('#reset').on('click', function() {
+		$(".box").removeClass("clicked");
+		$(".box").removeClass("x");
+		$(".box").removeClass("o");
+	})
 
 });

@@ -7,10 +7,14 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
     <style>
+        body{
+            text-align: center;
+        }
         .container {
             width: 315px;
             height: auto;
             margin: 0 auto;
+            margin-top: 20px;
         }
         .box {
             height: 100px;
@@ -38,22 +42,36 @@
         .o::after {
             content: "O";
         }
+        .blue {
+            color: blue;
+            font-weight: bold;
+        }
+        .red {
+            color: red;
+            font-weight: bold;
+        }
+        #reset {
+            padding: 10px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 13px;
+        }
     </style>
 </head>
 <body>
-
-<div class="container">
-    <div id="square1" class="box"></div>
-    <div id="square2" class="box"></div>
-    <div id="square3" class="box"></div>
-    <div id="square4" class="box"></div>
-    <div id="square5" class="box"></div>
-    <div id="square6" class="box"></div>
-    <div id="square7" class="box"></div>
-    <div id="square8" class="box"></div>
-    <div id="square9" class="box"></div>
-</div>
-
+    <p> Player 1 plays as <span class="red">X</span> and the Player 2 plays as <span class="blue">O</span> </p>
+    <button id="reset" disabled>Start Again</button>
+    <div class="container">
+        <div id="square1" class="box"></div>
+        <div id="square2" class="box"></div>
+        <div id="square3" class="box"></div>
+        <div id="square4" class="box"></div>
+        <div id="square5" class="box"></div>
+        <div id="square6" class="box"></div>
+        <div id="square7" class="box"></div>
+        <div id="square8" class="box"></div>
+        <div id="square9" class="box"></div>
+    </div>
 
 </body>
 </html>
